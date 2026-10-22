@@ -320,3 +320,18 @@ the README uses `OWNER/codex-tps` as an explicit placeholder. Public GitHub
 installation and hosted CI remain untested. Source files, tests, manifests,
 documentation, and the demo image are prepared for the initial local commit;
 private diagnostic evidence and the takeover backup remain ignored in `.local/`.
+
+### Public repository and README humor (2026-10-23)
+
+The user published `return2faye/codex-tps` on GitHub. Repository metadata confirms
+public visibility, and remote `main` contains the initial commit `f576c1e`.
+The README installation examples now use that repository instead of `OWNER`.
+This confirms publication, not a complete installation test on another machine.
+
+At the user's request, the README adds the English section "Trust Tibo. Verify
+tok/s." and an existing Saint Tibo community meme. The image is embedded from
+its external image URL, with a link to the Saint Tibo fan archive where it was
+found; the image is not bundled or relicensed under this repository's MIT license.
+The copy jokes about watching the speed dial while retaining the distinction
+between observing visible-text speed and proving throttling or its cause.
+No runtime behavior changed.

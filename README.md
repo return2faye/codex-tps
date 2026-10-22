@@ -14,6 +14,22 @@
 
 Codex TPS adds a conversation panel that observes the current conversation, plus an optional terminal watcher. It estimates visible text speed and separately displays the desktop's reported output usage, which includes tool calls and reasoning.
 
+## Trust Tibo. Verify tok/s.
+
+<p align="center">
+  <a href="https://codex-tibo.codes/">
+    <img src="https://pbs.twimg.com/media/HNe8NgGaQAAJdPM?format=jpg&amp;name=small" width="280" alt="Community parody of Saint Tibo holding token coins and a RESET button">
+  </a>
+</p>
+
+<p align="center"><em>Saint Tibo, giver of tokens, resetter of limits. Community meme via the <a href="https://codex-tibo.codes/">Saint Tibo fan archive</a>.</em></p>
+
+Built for the moment Codex starts typing like it's paid by the hour and the group chat asks: **"Tibo, did you touch the speed dial?"**
+
+We're grateful for the resets. We'd just like to know whether our tokens are arriving by bicycle. So we put a speedometer on the stream.
+
+The graph shows observed visible-text speed. It can't prove throttling or tell us who touched the dial. Unofficial project; no affiliation with OpenAI or Tibo.
+
 ## Requirements
 
 - macOS with Codex Desktop installed and signed in.
@@ -25,14 +41,14 @@ Codex TPS reads the local Codex IPC socket and conversation index. It does not w
 
 ## Install the Codex Desktop plugin
 
-Once the repository is published, install the plugin directly from its GitHub marketplace without cloning it:
+Install the plugin directly from its GitHub marketplace without cloning it:
 
 ```sh
-codex plugin marketplace add OWNER/codex-tps
+codex plugin marketplace add return2faye/codex-tps
 codex plugin add codex-tps@codex-tps-dev
 ```
 
-Replace `OWNER` with the GitHub account or organization that hosts the repository. The marketplace ID is `codex-tps-dev`. These commands use Codex's supported GitHub marketplace source and plugin selector syntax. See OpenAI's [plugin packaging and marketplace guide](https://developers.openai.com/plugins/build/plugins).
+The marketplace ID is `codex-tps-dev`. These commands use Codex's supported GitHub marketplace source and plugin selector syntax. See OpenAI's [plugin packaging and marketplace guide](https://developers.openai.com/plugins/build/plugins).
 
 After installation, reload plugins in Codex Desktop or restart the app. Open a conversation and choose **Codex TPS** from its content tabs, or invoke `codex_tps_open`. The panel starts observing that conversation automatically. Use **Stop** to pause and **Start observing** to resume.
 
@@ -73,7 +89,7 @@ It refreshes every 500 ms, waits up to 10 seconds for the first IPC snapshot, an
 To install the shell command from a source checkout, use the local installer instead of the GitHub marketplace flow:
 
 ```sh
-git clone https://github.com/OWNER/codex-tps.git
+git clone https://github.com/return2faye/codex-tps.git
 cd codex-tps
 uv run --no-project --python 3.11 install.py
 ```
@@ -117,7 +133,7 @@ The latest local verification includes:
 | Installed MCP service and CLI usage | Both received 2,577 reported output tokens, including 914 reasoning tokens, over 45 seconds; clean exits |
 | Live visible-text stream | 171 text patches and 900 characters observed during generation; median patch interval about 72 ms |
 
-The browser preview shows real data from Codex Desktop IPC. Native desktop rendering was confirmed for 0.1.1; the current 0.1.4 panel and icon still need native visual confirmation. Installation from a local checkout passed; installation from the future public GitHub repository has not yet been tested. See [SESSION.md](SESSION.md) for detailed evidence, version notes, and known limitations.
+The browser preview shows real data from Codex Desktop IPC. Native desktop rendering was confirmed for 0.1.1; the current 0.1.4 panel and icon still need native visual confirmation. Installation from a local checkout passed; installation from the public GitHub repository has not yet been tested. See [SESSION.md](SESSION.md) for detailed evidence, version notes, and known limitations.
 
 ## Troubleshooting
 
