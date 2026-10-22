@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "codex-tps": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--no-project",
+        "--with",
+        "tiktoken>=0.8,<1",
+        "python",
+        "${PLUGIN_ROOT}/server.py",
+        "mcp"
+      ],
+      "cwd": "${PLUGIN_ROOT}"
+    }
+  }
+}

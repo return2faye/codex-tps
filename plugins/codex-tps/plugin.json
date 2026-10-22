@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "codex-tps",
+  "version": "0.1.4",
+  "description": "Experimental local live-throughput monitor for Codex Desktop and shell.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "composerIcon": "./assets/codex-tps-icon.svg",
+        "displayName": "Codex TPS",
+        "shortDescription": "Text speed and output usage",
+        "longDescription": "Observe live visible-text speed and reported model output, including tool calls and reasoning, in a conversation panel or the shell. Usage arrives in batches; live token rates estimate visible text only using experimental desktop IPC.",
+        "developerName": "Local development",
+        "logo": "./assets/codex-tps-icon.svg",
+        "category": "Engineering",
+        "capabilities": [
+          "Interactive",
+          "Read"
+        ]
+      }
+    }
+  }
+}

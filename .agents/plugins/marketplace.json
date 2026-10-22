@@ -1,0 +1,20 @@
+{
+  "name": "codex-tps-dev",
+  "interface": {
+    "displayName": "Codex TPS Local Development"
+  },
+  "plugins": [
+    {
+      "name": "codex-tps",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-tps"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Engineering"
+    }
+  ]
+}
